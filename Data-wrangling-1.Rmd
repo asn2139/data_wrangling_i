@@ -1,21 +1,10 @@
 ---
 title: "Datawrangling_i"
-output: html_document
+output: github_document
 ---
-
-I'm an R Markdown document! 
-
-# Section 1
-
-Here's a **code chunk** that samples from 
-a _normal distribution_:
-
-```{r}
-samp = rnorm(100)
-length(samp)
+```{r setup}
+library (tidyverse)
 ```
 
-# Section 2
+##read in some data
 
-I can take the mean of the sample, too!
-The mean is `r mean(samp)`.
