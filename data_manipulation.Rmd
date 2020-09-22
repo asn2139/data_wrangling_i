@@ -8,3 +8,11 @@ output: github_document
 ```{r setup}
 library (tidyverse)
 ```
+
+Load in the FAS Litters
+
+```{r}
+litters_df=read_csv("./data/FAS_litters.csv")
+litters_df=janitor::clean_names(litters_df)
+```
+
