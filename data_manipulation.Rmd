@@ -49,6 +49,49 @@ select(litters_df, litter_number, everything())
 ```{r}
 relocate(litters_df, litter_number)
 ```
+## `filter`
 
+```{r}
+filter(litters_df, gd0_weight <22)
+```
 
+```{r}
+filter(litters_df, gd0_weight >=22)
+```
+
+```{r}
+filter(litters_df, gd_of_birth==20)
+```
+```{r}
+filter(litters_df, !(gd_of_birth==20))
+```
+```{r}
+filter(litters_df, gd_of_birth !=20)
+```
+```{r}
+filter (litters_df, gd0_weight >=22, gd_of_birth==20)
+```
+```{r}
+filter(litters_df, group=="Mod8")
+```
+
+```{r}
+filter(litters_df, group %in% c("Mod8", "Con7") )
+```
+## `mutate`
+
+create new variable, modifying cariables
+
+```{r}
+mutate(
+  litters_df, 
+      wt_gain=gd18_weight-gd0_weight,
+      group=str_to_lower(group))
+```
+## `arange`
+
+```{r}
+
+arrange(litters_df, pups_born_alive)
+```
 
